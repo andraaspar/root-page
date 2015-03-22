@@ -9,12 +9,6 @@ module ap {
 		private static instance = new Main();
 		
 		constructor() {
-			jQuery(illa.bind(this.onDomLoaded, this));
-		}
-		
-		onDomLoaded(): void {
-			illa.Log.info('DOM loaded.');
-			
 			if (window.location.search !== '?nr') {
 				this.detectLanguageAndRedirect();
 			}
